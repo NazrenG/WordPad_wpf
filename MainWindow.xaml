@@ -1,0 +1,45 @@
+﻿<Window x:Class="WordPad_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordPad_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="DarkCyan">
+        <WrapPanel Height="80" VerticalAlignment="Top">
+            <Label Content="File" Margin="10 30" Padding="0"/>
+            <TextBox Name="txt"  Margin="0 20 25 20" Width="250" Foreground="CadetBlue" DataContext="select a file"/>
+
+            <Button Name="btn_open"  Width="35" Height="35" Margin="0 20 0 20" Foreground="Black"
+                    Click="btn_open_Click" >
+                <Image Source="Images\icons8-triangle-32.png"/>
+            </Button>
+            <CheckBox Name="checkbox" Width="75" Height="35" Margin="35 20 25 20" Content="Auto Save"
+                      IsChecked="False"/>
+            <Button Name="btn_save"  Width="35" Height="35" Margin="0 20 0 20" Foreground="Black"
+                    Click="btn_save_Click">
+                <Image Source="Images\icons8-less-than-30.png"/>
+            </Button>
+            <Button Name="btn_cut"  Width="35" Height="35" Margin="40 20 0 20" Foreground="Black"
+                    Click="btn_cut_Click">
+                <Image Source="Images\icons8-cut-50.png"/>
+            </Button>
+            <Button Name="btn_copy"  Width="35" Height="35" Margin="10 20 0 20" Foreground="Black"
+                    Click="btn_copy_Click">
+                <Image Source="Images\icons8-copy-50.png"/>
+            </Button>
+            <Button Name="btn_paste"  Width="35" Height="35" Margin="10 20 0 20" Foreground="Black"
+                    Click="btn_paste_Click">
+                <Image Source="Images\icons8-paste-50.png"/>
+            </Button>
+            <Button x:Name="btn_selectAll"  Margin="45 20 0 20" Foreground="Black"
+                    Click="btn_selectAll_Click">
+                <Image Source="Images\icons8-select-all-50.png"/>
+            </Button>
+
+        </WrapPanel>
+        <RichTextBox Name="rich_txt" Margin="0,83,0,0" TextChanged="rich_txt_TextChanged"/>
+
+    </Grid>
+</Window>
